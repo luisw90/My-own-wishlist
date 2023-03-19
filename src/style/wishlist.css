@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  font-family: 'montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 25px;
+  background: rgb(22, 22, 67);
+}
+
+:root {
+  --primary-color-purple: rgb(146, 103, 247);
+  --primary-color-white: rgb(255, 255, 255);
+}
+
+.header__title {
+  display: flex;
+  justify-content: center;
+  color: antiquewhite;
+}
+
+.header__subtitle-box {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.header__subtitle {
+  padding-left: 20px;
+  color: var(--primary-color-white);
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background: var(--primary-color-white);
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.form__box {
+  width: 100%;
+}
+
+.form__input-title, .form__input-description  {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  outline-width: 0;
+}
+
+.form__input-title[type="text"], .form__input-description[type="text"] {
+  padding-left: 20px;
+}
+
+.form__button-box {
+  padding-right: 20px;
+}
+
+.form__button {
+  padding: 3px 10px;
+  border-radius: 5px;
+  height: 30px;
+  background: var(--primary-color-purple);
+  font-size: large;
+  color: var(--primary-color-white);
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.wishlist {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(1, 1fr);
+  margin: 0;
+  padding: 0;
+}
+
+.wishlist__card-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: var(--primary-color-purple);
+  color: var(--primary-color-white);
+  font-size: 1em;
+  border-radius: 10px;
+  border: 1px solid black;
+  width: 100%;
+}
+
+.wishlist__card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wishlist__text {
+  padding: 5px;
+  margin: 0;
+}
+
+.wishlist__card-checkbox {
+  height: 24px;
+  width: 24px;
+  accent-color: var(--primary-color-purple);
+  border-radius: 20px;
+  box-shadow: 0 1px 3px var(--primary-color-white)
+}
+
+.wishlist__delete-button {
+  border-radius: 10%;
+  font-weight: bold;
+  height: 40px;
+  width: 60px;
+  box-shadow: 0px 2px 2px var(--primary-color-purple);
+  border: none;
+  display: block;
+  margin-inline: 20px;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+
+.Delete-all-button {
+  position:absolute;
+  display: flex;
+  justify-content: flex-end;
+  font-weight: bold;
+  color: var(--primary-color-purple);
+  padding-inline: 12px;
+  padding-block: 6px;
+  bottom: 3%;
+  right: 3%;
+  cursor: pointer;
+}
+
+.Delete-all-button-hidden {
+  display: none;
+  visibility: hidden;
+}
+
+@media only screen and (min-width: 550px) {
+  .header__subtitle {
+    margin-left: 20%;
+  }
+
+  .form {
+    margin-inline: 20%;
+  }
+
+  .wishlist {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  .wishlist {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1225px) {
+  .header__subtitle {
+    margin-left: 30%;
+  }
+
+  .form {
+    margin-inline: 30%;
+  }
+
+  .wishlist {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+

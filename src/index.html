@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>&lt;/salt&gt; :: Shopping wish list</title>
+  <link rel="stylesheet" type="text/css" href="./style/wishlist.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script defer src="./dist/wishlist.js"></script>
+</head>
+
+<body>
+  <header>
+    <div>
+      <h1 class="header__title">
+        My own wishlist!
+      </h1>
+    </div>
+    <div class="header__subtitle-box">
+      <h2 class="header__subtitle">
+        Create a list item!
+      </h2>
+    </div>
+    <form class="form" id="form">
+      <div class="form__box">
+        <input class="form__input-title" id="form__title-input" type="text" placeholder="Add title..." data-testid="txtCardTitle" name="title" required><br>
+        <input class="form__input-description" id="form__description-input" type="text" placeholder="Add description (optional)..." data-testid="txtCardDescription" name="description">
+      </div>
+      <div class="form__button-box">
+        <input type="submit" value="Add" id="form__button" data-testid="btnAddCard" class="form__button" />
+      </div>
+    </form> 
+  </header>
+  <main>
+    <ul id="wishlist" class="wishlist" data-testid="cardList">
+    </ul>
+    <div>
+      <button id="Delete-all-button" class="Delete-all-button-hidden Delete-all-button">Delete list </button>
+    </div>
+  </main>
+</body>
+</html>

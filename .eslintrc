@@ -1,0 +1,9 @@
+{
+  "extends": "salt-typescript",
+  "rules": {
+    // your overrides
+  },
+  "parserOptions": {
+    "project": ["./tsconfig.json"]
+  }
+}
